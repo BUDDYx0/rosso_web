@@ -5,6 +5,32 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import {PostMetadata} from "../../../components/PostMetadata";
 
+interface ImageSources {
+    [key: string]: string; // Define the structure of the object as key-value pairs where both key and value are strings
+}
+
+const imageSources : ImageSources = {
+    EVENT: '/images/ban_events.png',
+    INFO: '/images/ban_info.png',
+    REVAMP: '/images/ban_revamp.png',
+    TEASER: '/images/ban_teaser.png',
+    UPDATE: '/images/ban_update.png',
+    DEV: '/images/ban_dev.png',
+}
+
+interface TypeColors {
+    [key: string]: string; // Define the structure of the object as key-value pairs where both key and value are strings
+}
+
+const typeColors : TypeColors = {
+    EVENT: 'bg-rose-600',
+    INFO: 'bg-blue-500',
+    REVAMP: 'bg-amber-500',
+    TEASER: 'bg-emerald-500',
+    UPDATE: 'bg-pink-400',
+    DEV: 'bg-purple-500', // Default color if type doesn't match any specific class
+}
+
 const getPostMetadata = () : PostMetadata[] => {
     const folder = "src/posts";
     const files = fs.readdirSync(folder);
@@ -33,7 +59,7 @@ const HomeNews = () => {
             <div className={'transition-all duration-300 w-80 h-96 max-h-96 relative rounded-lg bg-neutral-950 outline outline-2 outline-neutral-700 hover:shadow-2xl hover:drop-shadow-white-shadow hover:scale-95 hover:opacity-70 overflow-hidden'}>
                 <div>
                     <Image
-                        src={"/images/ban_events.png"}
+                        src={imageSources[post.type] || '/images/ban_revamp.png'}
                         alt={''}
                         width={700}
                         height={200}
@@ -46,7 +72,7 @@ const HomeNews = () => {
                     <p className={'text-neutral-400'}>{post.date}</p>
                     <p>{post.subtitle}</p>
                     <div className={'mt-3 absolute bottom-4'}>
-                        <span className={'bg-rose-600 font-semibold p-1 rounded-lg'}>{post.type}</span>
+                        <span className={`${typeColors[post.type]} font-semibold p-1 rounded-lg`}>{post.type}</span>
                     </div>
                 </div>
             </div>
