@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './TiltDividerBottom.module.css'
 
 const TiltDividerBottom = () => {
     return (
