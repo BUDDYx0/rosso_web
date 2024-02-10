@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 import {PostMetadata} from "../../../components/PostMetadata";
 
 interface ImageSources {
-    [key: string]: string; // Define the structure of the object as key-value pairs where both key and value are strings
+    [key: string]: string;
 }
 
 const imageSources : ImageSources = {
@@ -19,7 +19,7 @@ const imageSources : ImageSources = {
 }
 
 interface TypeColors {
-    [key: string]: string; // Define the structure of the object as key-value pairs where both key and value are strings
+    [key: string]: string;
 }
 
 const typeColors : TypeColors = {
@@ -28,7 +28,7 @@ const typeColors : TypeColors = {
     REVAMP: 'bg-amber-500',
     TEASER: 'bg-emerald-500',
     UPDATE: 'bg-pink-400',
-    DEV: 'bg-purple-500', // Default color if type doesn't match any specific class
+    DEV: 'bg-purple-500',
 }
 
 const getPostMetadata = () : PostMetadata[] => {
