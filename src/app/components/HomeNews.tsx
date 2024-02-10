@@ -3,9 +3,25 @@ import Image from "next/image";
 import Link from "next/link";
 import fs from 'fs';
 
+const getPostMetadata = () => {
+    const folder = "E:/rosso_web/src/posts";
+    const files = fs.readdirSync(folder);
+    const markdownPosts = files.filter((file) => file.endsWith(".md"));
+    const slugs = markdownPosts.map((file) => file.replace(".md", ""));
+    return slugs;
+};
+
 const HomeNews = () => {
+    const postMetadata = getPostMetadata();
+    const postPreviews = postMetadata.map((slug) => (
+        <div>
+            <h1>{slug}</h1>
+        </div>
+    ))
+
     return (
         <section className={'bg-main text-neutral-200 py-32'}>
+            {postPreviews}
             <div className={'max-w-content w-auto m-auto'}>
                 <h2 className={'text-center md:text-left font-bold text-4xl mb-6'}>Latest Updates</h2>
                 <div className={'w-80 m-auto md:w-full sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-16 gap-y-5'}>
