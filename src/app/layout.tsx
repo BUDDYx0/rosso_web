@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <main className={'bg-black'}>
+      <main className={'bg-[#010202]'}>
           <GlobalNavigation/>
           {children}
           <GlobalFooter/>
