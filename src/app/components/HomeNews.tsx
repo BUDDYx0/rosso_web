@@ -41,21 +41,29 @@ const getPostMetadata = () : PostMetadata[] => {
         const matterResult = matter(fileContents);
         return {
             title: matterResult.data.title,
-            date: matterResult.data.date,
+            date: new Date(matterResult.data.date), // Convert date string to Date object
             subtitle: matterResult.data.subtitle,
             type: matterResult.data.type,
             slug: fileName.replace(".md", ""),
         };
     });
 
-    return posts;
+    // Sort posts by date in descending order
+    posts.sort((a, b) => b.date - a.date);
+
+    return posts.map(post => ({
+        ...post,
+        date: post.date.toLocaleDateString(), // Format date to string
+    }));
 };
+
+
 
 const HomeNews = () => {
     const postMetadata = getPostMetadata();
     const postPreviews = postMetadata.map((post) => (
         // eslint-disable-next-line react/jsx-key
-        <Link href={`/posts/${post.slug}`}>
+        <Link key={post.slug} href={`/posts/${post.slug}`}>
             <div className={'transition-all duration-300 w-80 h-96 max-h-96 relative rounded-lg bg-neutral-950 outline outline-2 outline-neutral-700 hover:shadow-2xl hover:drop-shadow-white-shadow hover:scale-95 hover:opacity-70 overflow-hidden'}>
                 <div>
                     <Image
