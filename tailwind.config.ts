@@ -12,11 +12,12 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'ain-hero-bg': "url('/img/ain-hero-bg.jpg')",
-        'main-bg': "url('/img/background_3440.png')",
+        'ain-hero-bg': "url('/images/ain-hero-bg.jpg')",
+        'main-bg': "url('/images/background_3440.png')",
       },
       maxWidth: {
-        'content': '1300px'
+        'content': '1300px',
+        'postContent': '800px'
       },
       dropShadow: {
         'white-shadow': '0px 20px 25px rgba(255, 255, 255, 0.1)',
@@ -32,6 +33,8 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 export default config

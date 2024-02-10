@@ -13,6 +13,7 @@
     "@tsparticles/react": "^3.0.0",
     "framer-motion": "^10.16.16",
     "gray-matter": "^4.0.3",
+    "markdown-to-jsx": "^7.4.1",
     "next": "14.0.4",
     "prisma": "^5.7.1",
     "react": "^18",
@@ -21,6 +22,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -20,10 +20,11 @@ const HomeNews = () => {
                 className={'transition-all duration-300 w-80 rounded-lg bg-neutral-950 outline outline-2 outline-neutral-700 hover:shadow-2xl hover:drop-shadow-white-shadow hover:scale-95 hover:opacity-70 overflow-hidden\t'}>
                 <div>
                     <Image
-                        src="/img/ban_events.png"
+                        src="/images/ban_events.png"
                         alt={''}
                         width={700}
                         height={200}
+                        quality={50}
                         className={'object-cover'}
                     />
                 </div>

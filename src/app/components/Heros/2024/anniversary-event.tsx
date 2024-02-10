@@ -8,9 +8,10 @@ const AinRelease = () => {
             <Image
                 src="/img/anniversary_design_banner.png"
                 alt={''}
-                width={10000}
+                width={5500}
                 height={500}
-                className={'md:object-fill'}
+                quality={80}
+                className={'rounded-lg'}
             />
         </div>
     );
