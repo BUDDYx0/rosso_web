@@ -18,10 +18,11 @@ const PostPage = (props: any) => {
     return (
         <section className={'bg-post-bg bg-fixed bg-top flex justify-center m-auto text-neutral-200 py-32 px-3'}>
             <div
-                className={'p-9 bg-neutral-950/85 backdrop-blur rounded-lg min-w-96 max-w-postContent shadow-2xl ' +
-                    'prose prose-neutral prose-invert list-disc prose-a:text-rose-600 prose-img:rounded-lg prose-h1:text-rose-400 prose-h2:text-rose-500'}>
-                <p className={'text-4xl font-bold text-center'}>{post.data.title}</p>
-                <div className={'prose-hr:border-white'}>
+                className={'p-9 bg-neutral-950/85 backdrop-blur rounded-lg min-w-96 shadow-2xl ' +
+                    'list-disc'}>
+                <p className={'text-4xl font-bold text-center mb-9'}>{post.data.title}</p>
+                <hr/>
+                <div className={'prose-hr:border-white prose-a:text-rose-600 prose-img:rounded-lg prose-h1:text-rose-400 prose-h2:text-rose-500 prose prose-neutral prose-invert max-w-postContent'}>
                     <Markdown>{post.content}</Markdown>
                 </div>
             </div>
