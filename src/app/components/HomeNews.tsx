@@ -51,7 +51,10 @@ const getPostMetadata = () : PostMetadata[] => {
     // Sort posts by date in descending order
     posts.sort((a, b) => b.date - a.date);
 
-    return posts.map(post => ({
+    // Slice the array to get only the first 8 posts
+    const limitedPosts = posts.slice(0, 8);
+
+    return limitedPosts.map(post => ({
         ...post,
         date: post.date.toLocaleDateString(), // Format date to string
     }));

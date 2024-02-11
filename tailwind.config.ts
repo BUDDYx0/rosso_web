@@ -14,10 +14,11 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'ain-hero-bg': "url('/images/ain-hero-bg.jpg')",
         'main-bg': "url('/images/background_3440.png')",
+        'post-bg': "url('/images/background_3440_2.png')",
       },
       maxWidth: {
         'content': '1300px',
-        'postContent': '800px'
+        'postContent': '900px'
       },
       dropShadow: {
         'white-shadow': '0px 20px 25px rgba(255, 255, 255, 0.1)',

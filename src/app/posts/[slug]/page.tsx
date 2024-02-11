@@ -16,11 +16,12 @@ const PostPage = (props: any) => {
     const post = getPostContent(slug);
 
     return (
-        <section className={'flex justify-center m-auto text-neutral-200 py-32 px-3'}>
+        <section className={'bg-post-bg bg-fixed bg-top flex justify-center m-auto text-neutral-200 py-32 px-3'}>
             <div
-                className={'p-6 bg-neutral-950 rounded-lg outline outline-2 min-w-96 max-w-postContent outline-neutral-700 shadow-2xl drop-shadow-white-shadow prose prose-neutral prose-invert prose-images:rounded-lg list-disc'}>
+                className={'p-9 bg-neutral-950/85 backdrop-blur rounded-lg min-w-96 max-w-postContent shadow-2xl ' +
+                    'prose prose-neutral prose-invert list-disc prose-a:text-rose-600 prose-img:rounded-lg prose-h1:text-rose-400 prose-h2:text-rose-500'}>
                 <p className={'text-4xl font-bold text-center'}>{post.data.title}</p>
-                <div>
+                <div className={'prose-hr:border-white'}>
                     <Markdown>{post.content}</Markdown>
                 </div>
             </div>
