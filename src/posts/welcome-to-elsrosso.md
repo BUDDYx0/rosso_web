@@ -48,6 +48,6 @@ In order to eliminate the enemies that threaten Heaven, Rose was given the task 
 > Due to the limitations of tailwind/typography, create images like this if you want to show multiple images in a row
 
 - **Special**
-  - Apostolos Ice Burner ![Apostolos Ice Burner](https://elwiki.net/wiki/images/9/98/IB_-_Apostolos.png) ![Apostolos Ice Burner](https://elwiki.net/wiki/images/9/98/IB_-_Apostolos.png)
+  - Apostolos Ice Burner ![Apostolos Ice Burner](https://elwiki.net/wiki/images/9/98/IB_-_Apostolos.png)
 
 ---  
