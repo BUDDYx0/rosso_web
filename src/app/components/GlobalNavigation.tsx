@@ -8,7 +8,9 @@ const GlobalNavigation = () => {
         <div className={'w-full fixed bg-main/80 z-50 shadow-md'}>
             <nav className={'flex justify-between text-white h-auto items-center backdrop-blur px-16 shadow-xl py-2'}>
                 <div>
-                    <Image src="/images/PR_short_logo.png" width={60} height={60} alt={'PRLOGO'}/>
+                    <Link href={'../'}>
+                        <Image src="/images/PR_short_logo.png" width={60} height={60} alt={'PRLOGO'}/>
+                    </Link>
                 </div>
                 <ul className={'relative flex gap-10 font-semibold py-4 px-8 rounded-3xl'}>
                     <Link href={'../'}

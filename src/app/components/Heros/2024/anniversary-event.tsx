@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const AinRelease = () => {
     return (
-        <div className={'w-full flex justify-center pt-[72px]'}>
+        <div className={'w-full flex justify-center'}>
             <Image
-                src="/img/anniversary_design_banner.png"
+                src="/images/anniversary_design_banner2.png"
                 alt={''}
                 width={5500}
                 height={500}

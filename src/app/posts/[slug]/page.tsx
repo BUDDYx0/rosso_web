@@ -22,7 +22,7 @@ const PostPage = (props: any) => {
                     'list-disc'}>
                 <p className={'text-4xl font-bold text-center mb-9'}>{post.data.title}</p>
                 <hr/>
-                <div className={'prose-hr:border-white prose-a:text-rose-600 prose-img:rounded-lg prose-h1:text-rose-400 prose-h2:text-rose-500 prose prose-neutral prose-invert max-w-postContent'}>
+                <div className={'prose-hr:border-white prose-a:text-rose-600 prose-img:rounded-lg prose-h1:text-rose-500 prose-h2:text-rose-600 prose prose-neutral prose-invert max-w-postContent'}>
                     <Markdown>{post.content}</Markdown>
                 </div>
             </div>
