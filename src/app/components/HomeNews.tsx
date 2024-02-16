@@ -34,7 +34,7 @@ const HomeNews = () => {
     const postMetadata = getPostMetadata();
     const postPreviews = postMetadata.map((post) => (
         <Link key={post.slug} href={`/posts/${post.slug}`}>
-            <div className={'transition-all duration-300 my-6 md:my-0 w-80 h-96 max-h-96 relative rounded-lg bg-neutral-950 outline outline-2 outline-neutral-700 hover:shadow-2xl hover:drop-shadow-white-shadow hover:scale-95 hover:opacity-70 overflow-hidden'}>
+            <div className={'transition-all duration-300 my-6 md:my-0 w-80 h-96 max-h-96 relative rounded-lg bg-neutral-950 outline outline-2 outline-neutral-700 active:scale-95 active:opacity-70 md:hover:shadow-2xl md:hover:drop-shadow-white-shadow md:hover:scale-95 md:hover:opacity-70 overflow-hidden'}>
                 <div>
                     <Image
                         src={imageSources[post.type] || '/images/ban_revamp.png'}

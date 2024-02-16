@@ -9,7 +9,7 @@ const HomeEvents = () => {
         <section className={'bg-main-bg py-32 text-white'}>
             <div className={'m-auto max-w-content'}>
                 <div className={'p-3 rounded-lg'}>
-                    <h2 className={'text-3xl font-bold mb-5'}>JOIN US NOW</h2>
+                    <h2 className={'text-3xl font-bold mb-5 text-center md:text-left'}>JOIN US NOW</h2>
                     <div className={'flex justify-center'}>
                         <div className={'sm:grid grid-rows-2 lg:grid-rows-1 md:grid-cols-2 lg:grid-cols-4 gap-5'}>
                             <div className={'relative col-span-2'}>
@@ -32,7 +32,8 @@ const HomeEvents = () => {
                                        width={300}
                                        height={300}
                                        quality={50}
-                                       className={'transition-all duration-300 hover:scale-95 rounded-lg object-cover hover:brightness-75 hover:saturate-50 shadow-lg'}
+                                       className={'transition-all duration-300 active:scale-95 md:hover:scale-95 mb-3 md:mb-0 rounded-lg object-cover' +
+                                           'active:brightness-75 active:saturate-50 md:hover:brightness-75 md:hover:saturate-50 shadow-lg'}
                                        alt={'Join Discord'}
                                 />
                             </Link>
@@ -42,7 +43,8 @@ const HomeEvents = () => {
                                        width={300}
                                        height={300}
                                        quality={70}
-                                       className={'transition-all duration-300 hover:scale-95 rounded-lg object-cover hover:brightness-75 hover:saturate-50 shadow-lg'}
+                                       className={'transition-all duration-300 active:scale-95 md:hover:scale-95 mb-3 md:mb-0 rounded-lg object-cover' +
+                                           'active:brightness-75 active:saturate-50 md:hover:brightness-75 md:hover:saturate-50 shadow-lg'}
                                        alt={'Donate now'}
                                 />
                             </Link>

@@ -13,7 +13,7 @@ const GlobalNavigation = () => {
                                objectFit='contain' alt={'PRLOGO'}/>
                     </Link>
                 </div>
-                <ul className={'flex space-x-5 md:gap-10 font-semibold py-4 px-8 rounded-3xl'}>
+                <ul className={'flex -ml-5 md:-ml-0 space-x-10 md:gap-10 font-semibold py-4 px-8 rounded-3xl'}>
                     <Link href={'../'}
                           className={'transition-all duration-200 drop-shadow-lg hover:text-gray-300 hover:scale-95'}>
                         <li>HOME</li>
