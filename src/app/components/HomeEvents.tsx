@@ -1,22 +1,13 @@
 'use client'
 
 import React from 'react';
-import {motion} from 'framer-motion'
 import Image from "next/image";
 import Link from "next/link";
 
 const HomeEvents = () => {
     return (
         <section className={'bg-main-bg py-32 text-white'}>
-            <motion.div
-                initial={{opacity: 0}}
-                whileInView={{opacity: 1}}
-                viewport={{once: true}}
-                transition={{
-                    duration: 2
-                }}
-                className={'m-auto max-w-content'
-            }>
+            <div className={'m-auto max-w-content'}>
                 <div className={'p-3 rounded-lg'}>
                     <h2 className={'text-3xl font-bold mb-5'}>JOIN US NOW</h2>
                     <div className={'flex justify-center'}>
@@ -58,7 +49,7 @@ const HomeEvents = () => {
                         </div>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 };
