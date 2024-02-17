@@ -6,7 +6,7 @@ const AinRelease = () => {
     return (
         <div className={'w-full flex justify-center'}>
             <Image
-                src="/images/anniversary_design_banner2.png"
+                src="/images/banner.png"
                 alt={''}
                 width={5500}
                 height={500}

@@ -22,20 +22,49 @@ const GlobalNavigation = () => {
     }, [prevScrollPos]);
 
     return (
-        <div className={`fixed w-full bg-black/50 text-neutral-200 backdrop-blur-lg z-50 transition-transform duration-300 transform ${isNavVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-            <nav className={'flex justify-evenly h-auto items-center py-3 font-semibold'}>
+        <div className={`fixed w-full bg-black/50 backdrop-blur-lg z-50 text-neutral-200 transition-transform duration-300 transform ${isNavVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+            <nav className={'flex justify-evenly h-auto items-center py-5 md:py-3 font-semibold'}>
                 <Link href={"../"} className={'invisible md:visible'}>
                     <Image src="/images/PR_short_logo.png" width={60} height={60} objectFit='contain' alt={'PRLOGO'} className={'w-0 md:w-auto'}/>
                 </Link>
                 <ul className={'flex justify-center gap-5 text-lg'}>
-                    <Link href={"../"}><li>HOME</li></Link>
-                    <Link href={"../"}><li>DONATE</li></Link>
-                    <Link href={'https://discord.gg/7qeatFqpjm'}><li>COMMUNITY</li></Link>
+                    <Link href={"../"}><li><a>HOME</a></li></Link>
+                    <Link href={"../"}><li><a>DONATE</a></li></Link>
+                    <Link href={'https://discord.gg/7qeatFqpjm'}><li><a>COMMUNITY</a></li></Link>
                 </ul>
                 <div className={'invisible w-0 md:w-auto md:visible'}>
                     <GlobalNavigationDownloadButton/>
                 </div>
             </nav>
+            <style jsx>{`
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                a {
+                    position: relative;
+                    color: inherit;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+
+                a::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: width 0.3s ease;
+                }
+
+                a:hover::before {
+                    width: 100%;
+                }
+            `}</style>
         </div>
     );
 };
