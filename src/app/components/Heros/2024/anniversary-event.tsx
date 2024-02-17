@@ -4,14 +4,14 @@ import Link from "next/link";
 
 const AinRelease = () => {
     return (
-        <div className={'w-full flex justify-center'}>
+        <div className={'flex justify-center'}>
             <Image
                 src="/images/banner.png"
                 alt={''}
-                width={5500}
-                height={500}
-                quality={80}
-                className={'rounded-lg'}
+                width={1920}
+                height={900}
+                quality={100}
+                className={'rounded-lg max-w-content'}
             />
         </div>
     );

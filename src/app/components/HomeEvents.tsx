@@ -38,7 +38,7 @@ const HomeEvents = () => {
                                 />
                             </Link>
                             <Link href={'https://discord.com/channels/1040290955330326528/1112657368883417108'}
-                            target={'_blank'}>
+                                  target={'_blank'}>
                                 <Image src={'/images/donate_big.png'}
                                        width={300}
                                        height={300}

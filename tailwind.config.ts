@@ -16,6 +16,9 @@ const config: Config = {
         'main-bg': "url('/images/background_3440.png')",
         'post-bg': "url('/images/background_3440_2.png')",
       },
+      width: {
+        'content': '1300px',
+      },
       maxWidth: {
         'content': '1300px',
         'postContent': '900px'
