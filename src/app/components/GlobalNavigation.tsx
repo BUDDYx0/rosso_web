@@ -1,35 +1,40 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import GlobalNavigationDownloadButton from "@/app/components/Buttons/GlobalNavigationDownloadButton";
 import Image from "next/image";
 
 const GlobalNavigation = () => {
+    const [isNavVisible, setIsNavVisible] = useState(true);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            setIsNavVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+            setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [prevScrollPos]);
+
     return (
-        <div className={'w-full fixed bg-main/80 z-50 shadow-md'}>
-            <nav className={'flex md:justify-around text-white h-auto items-center backdrop-blur px-16 shadow-xl py-2'}>
-                <div className={'invisible md:visible'}>
-                    <Link href={'../'}>
-                        <Image src="/images/PR_short_logo.png" width={60} height={60}
-                               objectFit='contain' alt={'PRLOGO'}/>
-                    </Link>
-                </div>
-                <ul className={'flex -ml-5 md:-ml-0 space-x-10 md:gap-10 font-semibold py-4 px-8 rounded-3xl'}>
-                    <Link href={'../'}
-                          className={'transition-all duration-200 drop-shadow-lg hover:text-gray-300 hover:scale-95'}>
-                        <li>HOME</li>
-                    </Link>
-                    <Link href={'https://discord.com/channels/1040290955330326528/1112657368883417108'}
-                          className={'transition-all duration-200 drop-shadow-lg hover:text-gray-300 hover:scale-95'}
-                          target={"_blank"}>
-                        <li>DONATE</li>
-                    </Link>
-                    <Link href={'https://discord.gg/7qeatFqpjm'}
-                          className={'transition-all duration-200 drop-shadow-lg hover:text-gray-300 hover:scale-95'}
-                    target={'_blank'}>
-                        <li>COMMUNITY</li>
-                    </Link>
+        <div className={`fixed w-full bg-black/50 text-neutral-200 backdrop-blur-lg z-50 transition-transform duration-300 transform ${isNavVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+            <nav className={'flex justify-evenly h-auto items-center py-3 font-semibold'}>
+                <Link href={"../"} className={'invisible md:visible'}>
+                    <Image src="/images/PR_short_logo.png" width={60} height={60} objectFit='contain' alt={'PRLOGO'} className={'w-0 md:w-auto'}/>
+                </Link>
+                <ul className={'flex justify-center gap-5 text-lg'}>
+                    <Link href={"../"}><li>HOME</li></Link>
+                    <Link href={"../"}><li>DONATE</li></Link>
+                    <Link href={'https://discord.gg/7qeatFqpjm'}><li>COMMUNITY</li></Link>
                 </ul>
-                <GlobalNavigationDownloadButton/>
+                <div className={'invisible w-0 md:w-auto md:visible'}>
+                    <GlobalNavigationDownloadButton/>
+                </div>
             </nav>
         </div>
     );
