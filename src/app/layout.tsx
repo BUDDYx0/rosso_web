@@ -6,6 +6,10 @@ import GlobalNavigation from "@/app/components/GlobalNavigation";
 
 const inter = Inter({ subsets: ['latin'] })
 
+export const viewport = {
+    themeColor: "#e11d48",
+};
+
 export const metadata: Metadata = {
   title: 'ElsRosso - International Private Server'
 }
