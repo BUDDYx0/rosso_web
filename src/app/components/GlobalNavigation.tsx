@@ -22,15 +22,24 @@ const GlobalNavigation = () => {
     }, [prevScrollPos]);
 
     return (
-        <div className={`fixed w-full bg-black/50 backdrop-blur-lg z-50 text-neutral-200 transition-transform duration-300 transform ${isNavVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-            <nav className={'flex justify-evenly h-auto items-center py-5 md:py-3 font-semibold'}>
+        <div
+            className={`fixed w-auto max-w-navbar-width m-auto mt-4 rounded-lg bg-black/50 text-neutral-200 backdrop-blur-lg z-50 transition-transform duration-300 transform ${isNavVisible ? 'translate-y-0' : '-translate-y-96'}`}
+            style={{left: '0', right: '0', display: 'flex', justifyContent: 'center'}}>
+            <nav className={'flex justify-evenly h-auto items-center py-5 md:py-3 font-semibold space-x-64'}>
                 <Link href={"../"} className={'invisible md:visible'}>
-                    <Image src="/images/PR_short_logo.png" width={60} height={60} objectFit='contain' alt={'PRLOGO'} className={'w-0 md:w-auto'}/>
+                    <Image src="/images/PR_short_logo.png" width={60} height={60} objectFit='contain' alt={'PRLOGO'}
+                           className={'w-0 md:w-auto'}/>
                 </Link>
                 <ul className={'flex justify-center gap-5 text-lg'}>
-                    <Link href={"../"}><li><a>HOME</a></li></Link>
-                    <Link href={"../"}><li><a>DONATE</a></li></Link>
-                    <Link href={'https://discord.gg/7qeatFqpjm'}><li><a>COMMUNITY</a></li></Link>
+                    <Link href={"../"}>
+                        <li>HOME</li>
+                    </Link>
+                    <Link href={"../"}>
+                        <li>DONATE</li>
+                    </Link>
+                    <Link href={'https://discord.gg/7qeatFqpjm'}>
+                        <li>COMMUNITY</li>
+                    </Link>
                 </ul>
                 <div className={'invisible w-0 md:w-auto md:visible'}>
                     <GlobalNavigationDownloadButton/>
@@ -66,6 +75,7 @@ const GlobalNavigation = () => {
                 }
             `}</style>
         </div>
+
     );
 };
 

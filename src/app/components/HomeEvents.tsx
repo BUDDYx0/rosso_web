@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const HomeEvents = () => {
     return (
-        <section className={'bg-main-bg py-32 text-white'}>
+        <section className={'py-32 text-white'}>
             <div className={'m-auto max-w-content'}>
                 <div className={'p-3 rounded-lg'}>
                     <h2 className={'text-3xl font-bold mb-5 text-center md:text-left'}>JOIN US NOW</h2>

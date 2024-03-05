@@ -4,7 +4,7 @@ import HomeEvents from "@/app/components/HomeEvents";
 
 export default function Home() {
   return (
-      <main>
+      <main className={'bg-post-bg bg-no-repeat bg-top bg-cover bg-fixed'}>
           <HomeHero/>
           <HomeNews/>
           <HomeEvents/>

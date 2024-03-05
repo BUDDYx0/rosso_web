@@ -20,6 +20,7 @@ const config: Config = {
         'content': '1300px',
       },
       maxWidth: {
+        'navbar-width': '1472px',
         'content': '1300px',
         'postContent': '900px'
       },

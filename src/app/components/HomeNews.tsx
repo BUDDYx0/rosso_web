@@ -58,11 +58,14 @@ const HomeNews = () => {
     ))
 
     return (
-        <section className={'text-neutral-200 py-32'}>
-            <div className={'max-w-content w-auto m-auto'}>
-                <h2 className={'text-center md:text-left font-bold text-4xl mb-6'}>Latest Updates</h2>
-                <div className={'w-80 m-auto md:w-full sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-x-16 md:gap-y-5'}>
-                    {postPreviews}
+        <section className={'text-neutral-200 py-16'}>
+            <div className={'flex justify-center'}>
+                <div className={'bg-neutral-950/85 backdrop-blur rounded-lg shadow-2xl p-12'}>
+                    <h2 className={'text-center md:text-left font-bold text-4xl mb-6'}>Latest Updates</h2>
+                    <div
+                        className={'w-80 m-auto md:w-full sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-x-8'}>
+                        {postPreviews}
+                    </div>
                 </div>
             </div>
         </section>

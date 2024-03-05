@@ -24,7 +24,7 @@ const PostPage = (props: any) => {
     const post = getPostContent(slug);
 
     return (
-        <section className={'bg-post-bg bg-fixed bg-top flex justify-center m-auto text-neutral-200 py-32 px-3'}>
+        <section className={'bg-post-bg bg-no-repeat bg-top bg-cover bg-fixed flex justify-center m-auto text-neutral-200 py-32 px-3'}>
             <div
                 className={'p-9 bg-neutral-950/85 backdrop-blur rounded-lg min-w-96 shadow-2xl ' +
                     'list-disc'}>
