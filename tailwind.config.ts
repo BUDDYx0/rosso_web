@@ -18,6 +18,7 @@ const config: Config = {
       },
       width: {
         'content': '1300px',
+        'navbar-width': '1472px',
       },
       maxWidth: {
         'navbar-width': '1472px',

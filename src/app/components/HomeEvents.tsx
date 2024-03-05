@@ -7,8 +7,8 @@ import Link from "next/link";
 const HomeEvents = () => {
     return (
         <section className={'py-32 text-white'}>
-            <div className={'m-auto max-w-content'}>
-                <div className={'p-3 rounded-lg'}>
+            <div className={'flex justify-center'}>
+                <div className={'m-auto w-navbar-width bg-neutral-950/85 rounded-lg p-6'}>
                     <h2 className={'text-3xl font-bold mb-5 text-center md:text-left'}>JOIN US NOW</h2>
                     <div className={'flex justify-center'}>
                         <div className={'sm:grid grid-rows-2 lg:grid-rows-1 md:grid-cols-2 lg:grid-cols-4 gap-5'}>

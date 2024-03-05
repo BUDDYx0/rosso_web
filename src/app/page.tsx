@@ -7,7 +7,6 @@ export default function Home() {
       <main className={'bg-post-bg bg-no-repeat bg-top bg-cover bg-fixed'}>
           <HomeHero/>
           <HomeNews/>
-          <HomeEvents/>
       </main>
   )
 }
