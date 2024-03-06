@@ -26,7 +26,7 @@ const PostPage = (props: any) => {
     return (
         <section className={'bg-post-bg bg-no-repeat bg-top bg-cover bg-fixed flex justify-center m-auto text-neutral-200 py-32 px-3'}>
             <div
-                className={'p-9 bg-neutral-950/70 border border-b-0 border-r-0 border-neutral-300 border-opacity-10 backdrop-blur rounded-lg min-w-96 shadow-2xl ' +
+                className={'p-9 bg-neutral-950/70 border border-b-0 border-r-0 border-neutral-300 border-opacity-10 backdrop-blur-lg rounded-lg min-w-96 shadow-2xl ' +
                     'list-disc'}>
                 <p className={'text-4xl font-bold text-center mb-9'}>{post.data.title}</p>
                 <hr/>
