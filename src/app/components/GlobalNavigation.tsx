@@ -31,14 +31,20 @@ const GlobalNavigation = () => {
                            className={'w-0 md:w-auto'}/>
                 </Link>
                 <ul className={'flex justify-center gap-5 text-lg'}>
-                    <Link href={"../"}>
-                        <li>HOME</li>
+                    <Link href={"../"} legacyBehavior passHref>
+                        <a>
+                            <li>HOME</li>
+                        </a>
                     </Link>
-                    <Link href={"../"}>
-                        <li>DONATE</li>
+                    <Link href={"../"} legacyBehavior passHref>
+                        <a>
+                            <li>DONATE</li>
+                        </a>
                     </Link>
-                    <Link href={'https://discord.gg/7qeatFqpjm'}>
-                        <li>COMMUNITY</li>
+                    <Link href={'https://discord.gg/7qeatFqpjm'} legacyBehavior passHref>
+                        <a>
+                            <li>COMMUNITY</li>
+                        </a>
                     </Link>
                 </ul>
                 <div className={'invisible w-0 md:w-auto md:visible'}>
