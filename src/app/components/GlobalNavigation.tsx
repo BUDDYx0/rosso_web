@@ -23,7 +23,7 @@ const GlobalNavigation = () => {
 
     return (
         <div
-            className={`fixed w-auto max-w-navbar-width m-auto sm:mt-4 sm:rounded-lg bg-neutral-950/85 text-neutral-200 backdrop-blur-lg z-50 transition-transform duration-300 transform ${isNavVisible ? 'translate-y-0' : '-translate-y-96'}`}
+            className={`fixed w-auto max-w-navbar-width m-auto sm:mt-4 sm:rounded-lg bg-neutral-950/60 text-neutral-200 backdrop-blur-lg z-50 border border-b-0 border-r-0 border-neutral-300 border-opacity-10 shadow-2xl transition-transform duration-300 transform ${isNavVisible ? 'translate-y-0' : '-translate-y-96'}`}
             style={{left: '0', right: '0', display: 'flex', justifyContent: 'center'}}>
             <nav className={'flex justify-evenly h-auto items-center py-5 md:py-3 font-semibold space-x-64'}>
                 <Link href={"../"} className={'invisible md:visible'}>
@@ -75,7 +75,6 @@ const GlobalNavigation = () => {
                 }
             `}</style>
         </div>
-
     );
 };
 

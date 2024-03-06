@@ -34,7 +34,7 @@ const HomeNews = () => {
     const postMetadata = getPostMetadata();
     const postPreviews = postMetadata.map((post) => (
         <Link key={post.slug} href={`/posts/${post.slug}`}>
-            <div className={'transition-all duration-300 my-6 md:my-0 w-80 h-96 max-h-96 relative rounded-lg bg-neutral-950 outline outline-2 outline-neutral-700 active:scale-95 active:opacity-70 md:hover:shadow-2xl md:hover:drop-shadow-white-shadow md:hover:scale-95 md:hover:opacity-70 overflow-hidden'}>
+            <div className={'transition-all duration-300 my-6 md:my-0 w-80 h-96 max-h-96 relative rounded-lg bg-neutral-950/50 outline outline-2 outline-neutral-700 active:scale-95 active:opacity-70 md:hover:shadow-2xl md:hover:drop-shadow-white-shadow md:hover:scale-95 md:hover:opacity-70 overflow-hidden'}>
                 <div>
                     <Image
                         src={imageSources[post.type] || '/images/ban_revamp.png'}
@@ -60,7 +60,7 @@ const HomeNews = () => {
     return (
         <section className={'text-neutral-200 py-16'}>
             <div className={'flex justify-center'}>
-                <div className={'bg-neutral-950/85 backdrop-blur rounded-lg shadow-2xl p-12'}>
+                <div className={'bg-neutral-950/60 border border-b-0 border-r-0 border-neutral-300 border-opacity-10 backdrop-blur rounded-lg shadow-2xl p-12'}>
                     <h2 className={'text-center md:text-left font-bold text-4xl mb-6'}>Latest Updates</h2>
                     <div
                         className={'w-80 m-auto md:w-full sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-x-8'}>
