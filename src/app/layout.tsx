@@ -11,7 +11,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'ElsRosso - International Private Server'
+  title: 'Solace - International Server'
 }
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
+    return (
     <html lang="en">
       <body className={inter.className}>
       <main className={'bg-[#010202]'}>
