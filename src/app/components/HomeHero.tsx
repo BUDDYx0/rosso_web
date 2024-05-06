@@ -5,7 +5,7 @@ import Image from "next/image";
 const HomeHero = () => {
     return (
         <section className="flex justify-center pt-32">
-            <Image src={'/images/project_zero_logo_rosso.png'} width={586} height={487} alt={'pr-logo'}/>
+            <Image src={'/images/banner_launcher_solace_logo.png'} width={598} height={424} quality={100} alt={'solace-logo'}/>
         </section>
     );
 };

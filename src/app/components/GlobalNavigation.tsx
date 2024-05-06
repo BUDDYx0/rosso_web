@@ -27,7 +27,7 @@ const GlobalNavigation = () => {
             style={{left: '0', right: '0', display: 'flex', justifyContent: 'center'}}>
             <nav className={'flex justify-evenly h-auto items-center py-5 md:py-3 font-semibold space-x-64'}>
                 <Link href={"../"} className={'invisible md:visible'}>
-                    <Image src="/images/PR_short_logo.png" width={60} height={60} objectFit='contain' alt={'PRLOGO'}
+                    <Image src="/images/icon_solace_game_s_2-2.png" width={60} height={60} objectFit='contain' quality={100} alt={'PRLOGO'}
                            className={'w-0 md:w-auto'}/>
                 </Link>
                 <ul className={'flex justify-center gap-5 text-lg'}>
