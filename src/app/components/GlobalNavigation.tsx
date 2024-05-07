@@ -23,12 +23,12 @@ const GlobalNavigation = () => {
 
     return (
         <div
-            className={`fixed w-auto max-w-navbar-width m-auto sm:mt-4 sm:rounded-lg bg-neutral-950/60 text-neutral-200 backdrop-blur-lg z-50 border border-b-0 border-r-0 border-neutral-300 border-opacity-10 shadow-2xl transition-transform duration-300 transform ${isNavVisible ? 'translate-y-0' : '-translate-y-96'}`}
+            className={`fixed w-auto max-w-navbar-width m-auto xl:mt-4 xl:w-[1165px] xl:rounded-lg bg-neutral-950/60 text-neutral-200 backdrop-blur-lg z-50 border border-b-0 border-r-0 border-neutral-300 border-opacity-10 shadow-2xl transition-transform duration-300 transform ${isNavVisible ? 'translate-y-0' : '-translate-y-96'}`}
             style={{left: '0', right: '0', display: 'flex', justifyContent: 'center'}}>
             <nav className={'flex justify-evenly h-auto items-center py-5 md:py-3 font-semibold space-x-64'}>
                 <Link href={"../"} className={'invisible md:visible'}>
                     <Image src="/images/icon_solace_game_s_2-2.png" width={60} height={60} objectFit='contain' quality={100} alt={'PRLOGO'}
-                           className={'w-0 md:w-auto'}/>
+                           className={'w-0 md:w-auto'} style={{objectFit: "contain"}}/>
                 </Link>
                 <ul className={'flex justify-center gap-5 text-lg'}>
                     <Link href={"../"} legacyBehavior passHref>
@@ -47,7 +47,7 @@ const GlobalNavigation = () => {
                         </a>
                     </Link>
                 </ul>
-                <div className={'invisible w-0 md:w-auto md:visible'}>
+                <div className={'invisible w-0 md:w-auto xl:visible'}>
                     <GlobalNavigationDownloadButton/>
                 </div>
             </nav>
